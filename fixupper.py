@@ -125,12 +125,12 @@ for commit_hash, commit in modified_files.items():
   if commit_hash != 'no-hash':
     print(colored(commit_hash, 'green', attrs=['bold']), '-', commit['commit_message'])
     for file in commit['files']:
-      print(colored(' {} >'.format(file['status'][0]), status_colors(file['status'])), colored(file['path'], 'grey'))
+      print(colored(' {} >'.format(file['status'][0]), status_colors(file['status'])), file['path'])
 
 if 'no-hash' in modified_files:
     print(colored('no-hash', 'red', attrs=['bold']), '-', 'These files have not yet been commited in this branch, they will be ignored in fixup mode.')
     for file in modified_files['no-hash']['files']:
-      print(colored(' {} >'.format(file['status'][0]), status_colors(file['status'])), colored(file['path'], 'grey'))
+      print(colored(' {} >'.format(file['status'][0]), status_colors(file['status'])), file['path'])
 
 # Check if user wants to proceed with fixup
 if(args.fixup):
