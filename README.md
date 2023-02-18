@@ -16,4 +16,11 @@ If the `--fixup` flag is passed to the script the user will be prompted to confi
 
 ### Example
 
-` > python3 fixupper.py --fixup`
+Modify the following alias with the correct path and add it to your gitconfig:
+
+`fixupper = !sh -c 'python3 ~/Path/to/fixupper.py $1' -`
+
+Example usage:
+
+https://user-images.githubusercontent.com/34559473/219870175-875c3b5a-d7f4-47c7-96e1-661a50c7b3e3.mov
+
